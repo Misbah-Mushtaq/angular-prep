@@ -7,6 +7,7 @@ import { EmployeeService } from 'src/employee.service';
   styleUrls: ['./employee-list.component.css']
 })
 export class EmployeeListComponent implements OnInit {
+  public errorMessage = ""
   public employees:any = [];
   constructor(private _employeeService: EmployeeService) {
 
@@ -14,7 +15,8 @@ export class EmployeeListComponent implements OnInit {
 
   ngOnInit(): void {
     this._employeeService.getEmployees()
-    .subscribe(data => this.employees = data)
+    .subscribe(data => this.employees = data,
+      error => this.errorMessage = error)
   }
 
 }
