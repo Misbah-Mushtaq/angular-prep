@@ -1,0 +1,15 @@
+.boldText {
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.textSuccess {
+    color: green;
+}
+.textWarn {
+    color: yellow;
+    font-style: italic;
+}
+.textSpecial {
+    color: blueviolet
+}

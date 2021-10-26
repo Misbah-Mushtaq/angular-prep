@@ -1,0 +1,50 @@
+
+<!-- <div class="boldText">
+  <h2 [ngClass]="messageClasses">{{name}}</h2>
+  <h2 [style.color]="isDisabled ? 'red' : 'yellow'">{{name + " style binding"}}</h2>
+  <h2 [ngStyle]="messageStyles">{{name + " style binding 2"}}</h2>
+  <button (click)="onClick($event)">Click me </button>
+  {{greetings}}
+  <input [(ngModel)]="name" type="text"/>
+  {{name}} -->
+  <!-- <h1 *ngIf="displayName" else elseBlock>welcome {{name}}</h1> -->
+  <!-- <div *ngIf="displayName; then ifBlock; else elseBlock"></div>
+  <ng-template #ifBlock>
+    <h1>{{name}}</h1>
+  </ng-template>
+  <ng-template #elseBlock>
+    <h1>Name is hidden</h1>
+  </ng-template>
+  <button (click)="toggleDisplay()">Toggle me </button>  
+</div> -->
+<!-- <div [ngSwitch]="color">
+  <div *ngSwitchCase="'red'">You picked Red color</div>
+  <div *ngSwitchCase="'blue'">You picked blue color</div>
+  <div *ngSwitchCase="'green'">You picked green color</div>
+  <div *ngSwitchDefault>Color not present</div>
+</div> -->
+<!-- <div *ngFor="let color of colors; index as i; first as f; last as l ">
+<ul style="list-style: none;">
+  <li><h3>{{l}} {{i}} {{color}}</h3></li>
+</ul>
+</div> -->
+<div>
+  <h1>{{name}}</h1>
+  <!-- <button (click)="fireEvent()">Fire Event</button> -->
+  <h1>{{name | titlecase}}</h1>
+  <h1>{{name | uppercase}}</h1>
+  <h1>{{name | lowercase}}</h1>
+  <h1>{{name | slice:4}}</h1>
+  <!-- this one with limit : from 4 upto 15 but don't inclue 15th letter -->
+  <h1>{{name | slice:4:15}}</h1>
+  <h1>{{person | json}}</h1>
+  <h2>{{5.84598 | number:'1.2-3'}}</h2>
+  <h2>{{5.84598 | number:'3.9-13'}}</h2>
+  <h2>{{0.28 | percent}}</h2>
+  <h2>{{0.28 | currency}}</h2>
+  <h2>{{0.28 | currency : 'EUR' : 'code'}}</h2>
+  <h2>{{0.28 | currency : 'EUR'}}</h2>
+  <h2>{{date | date}}</h2>
+  <h2>{{date | date: 'shortTime'}}</h2>
+  <h2>{{date | date: 'shortDate'}}</h2>
+</div>
