@@ -1,9 +1,14 @@
 <div>
-  <!-- <h1>{{message}}</h1> -->
+  <h1>Routing AND Navigation</h1>
   <!-- <app-first-component></app-first-component> -->
   <!-- events binding -->
   <!-- <app-first-component (childEvent)="message=$event" [parentData]="name"></app-first-component> --> 
-  <app-employee-list></app-employee-list>
-  <app-employee-details></app-employee-details>
+  <!-- <app-employee-list></app-employee-list>
+  <app-employee-details></app-employee-details> -->
 </div>
+<nav>
+  <a [routerLink]="['/employees']"  routerLinkActive="router-link-active"  >Employees</a>
+  <a [routerLink]="['/departments']"  routerLinkActive="router-link-active">Departments</a>
+  <a [routerLink]="['/employeeDetails']" routerLinkActive="router-link-active" >Employee Details</a>
+</nav>
 <router-outlet></router-outlet>
