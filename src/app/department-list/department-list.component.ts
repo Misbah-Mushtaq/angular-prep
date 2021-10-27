@@ -25,7 +25,7 @@ export class DepartmentListComponent implements OnInit {
     })
   }
   onSelect (department: any) {
-    this.router.navigate(['/departmentDetails', department.id])
+    this.router.navigate([department.id], { relativeTo: this.route })
   }
   isSelected (department: any) {
     return department.id === this.selectedId

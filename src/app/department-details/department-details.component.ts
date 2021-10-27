@@ -20,16 +20,19 @@ export class DepartmentDetailsComponent implements OnInit {
 
   goPrev (): void {
     let prevId: any = this.departmentId - 1
-    this.router.navigate(['/departmentDetails', prevId])
+    this.router.navigate(['/departments', prevId])
   }
 
   goNext (): void {
     let nextId: any = this.departmentId + 1
-    this.router.navigate(['/departmentDetails', nextId])
+    this.router.navigate(['/departments', nextId])
   }
 
   goToDepartments (): void {
     let selectedId: any = this.departmentId ? this.departmentId : null
-    this.router.navigate(['/departments', { id: selectedId }])
+    // this.router.navigate(['/departments', { id: selectedId }])
+    this.router.navigate(['../', { id: selectedId }], {
+      relativeTo: this.route
+    })
   }
 }
