@@ -4,13 +4,19 @@ import { FormsModule } from '@angular/forms'
 import { AppRoutingModule, routingComponents } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { FirstComponentComponent } from './first-component/first-component.component'
-import { EmployeeService } from 'src/employee.service'
 import { HttpClientModule } from '@angular/common/http'
+import { DepartmentContactComponent } from './department-contact/department-contact.component'
+import { TdfPracticeComponent } from './tdf-practice/tdf-practice.component'
 
 @NgModule({
-  declarations: [AppComponent, FirstComponentComponent, routingComponents],
+  declarations: [
+    AppComponent,
+    FirstComponentComponent,
+    routingComponents,
+    DepartmentContactComponent,
+    TdfPracticeComponent
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
-  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
