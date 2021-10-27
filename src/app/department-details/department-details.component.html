@@ -1,8 +1,19 @@
 <div>
-  <h1>{{ departmentId }}</h1>
-  <a (click)="goPrev()">Prev</a>
-  <a (click)="goNext()">Next</a>
-  <button class="btn btn-primary btn-sm" (click)="goToDepartments()">
-    Back
-  </button>
+  <h1>Selected Department is : {{ departmentId }}</h1>
+  <router-outlet></router-outlet>
+  <p>
+    <button class="btn-sm btn-success" (click)="goPrev()">Prev</button>
+    <button class="btn-sm btn-success ml-3" (click)="goNext()">Next</button>
+  </p>
+  <p>
+    <button (click)="showOverview()" class="btn-sm btn-info">Overview</button>
+    <button (click)="showContact()" class="btn-sm btn-info ml-3">
+      Contact
+    </button>
+  </p>
+  <div>
+    <button class="btn btn-primary btn-sm" (click)="goToDepartments()">
+      Back
+    </button>
+  </div>
 </div>

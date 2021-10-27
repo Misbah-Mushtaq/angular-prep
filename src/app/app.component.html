@@ -1,14 +1,29 @@
-<div>
+<div class="p-3">
   <!-- <h1>Routing AND Navigation</h1> -->
   <!-- <app-first-component></app-first-component> -->
   <!-- events binding -->
-  <!-- <app-first-component (childEvent)="message=$event" [parentData]="name"></app-first-component> --> 
+  <!-- <app-first-component (childEvent)="message=$event" [parentData]="name"></app-first-component> -->
   <!-- <app-employee-list></app-employee-list>
   <app-employee-details></app-employee-details> -->
+  <nav>
+    <a
+      class="btn btn-secondary mr-2 btn-sm"
+      [routerLink]="['/employees']"
+      routerLinkActive="router-link-active"
+      >Employees</a
+    >
+    <a
+      class="btn btn-secondary mr-2 btn-sm"
+      [routerLink]="['/departments']"
+      routerLinkActive="router-link-active"
+      >Departments</a
+    >
+    <a
+      class="btn btn-secondary mr-2 btn-sm"
+      [routerLink]="['/employeeDetails']"
+      routerLinkActive="router-link-active"
+      >Employee Details</a
+    >
+  </nav>
+  <router-outlet></router-outlet>
 </div>
-<nav>
-  <a class="btn btn-secondary mr-2 btn-sm" [routerLink]="['/employees']"  routerLinkActive="router-link-active"  >Employees</a>
-  <a class="btn btn-secondary mr-2 btn-sm" [routerLink]="['/departments']"  routerLinkActive="router-link-active">Departments</a>
-  <a class="btn btn-secondary mr-2 btn-sm" [routerLink]="['/employeeDetails']" routerLinkActive="router-link-active" >Employee Details</a>
-</nav>
-<router-outlet></router-outlet>

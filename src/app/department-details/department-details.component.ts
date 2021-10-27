@@ -35,4 +35,14 @@ export class DepartmentDetailsComponent implements OnInit {
       relativeTo: this.route
     })
   }
+  showOverview (): void {
+    this.router.navigate(['overview'], {
+      relativeTo: this.route
+    })
+  }
+  showContact (): void {
+    this.router.navigate(['contact'], {
+      relativeTo: this.route
+    })
+  }
 }
