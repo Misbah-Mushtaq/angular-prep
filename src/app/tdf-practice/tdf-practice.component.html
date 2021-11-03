@@ -1,3 +1,4 @@
+<!-- Template driven form -->
 <div title="templateDrivenForms">
   <h3>Angular Form</h3>
 
@@ -14,6 +15,7 @@
         required
         [(ngModel)]="userModal.name"
       />
+      <small class="text-danger" [class.d-none]="name.valid || name.untouched">Name is required</small>
     </div>
     <!-- {{ name.className }} -->
     <div class="form-group">
@@ -34,10 +36,16 @@
         type="tel"
         name="phone"
         #phone= "ngModel"
-        pattern="^\d{10}$"
+        pattern="^\d{11}$"
         [class.is-invalid] = "phone.invalid && phone.touched"
         [(ngModel)]="userModal.phone"
-      />
+        required
+      /> 
+      <!-- <small class="text-danger" [class.d-none]="phone.valid || phone.untouched">Phone Number is required and must be 11 digits</small> -->
+      <div *ngIf="phone.errors && (phone.invalid || phone.untouched)">
+        <small class="text-danger" *ngIf="phone.errors.required">Phone number is required</small>
+        <small class="text-danger" *ngIf="phone.errors.pattern">Phone number must be 11 digits</small>
+      </div>
     </div>
     <div class="form-group">
       <label>Select a topic</label>
