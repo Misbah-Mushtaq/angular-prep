@@ -1,19 +1,21 @@
 <div title="templateDrivenForms">
-  <h3>Enrollment Form</h3>
+  <h3>Angular Form</h3>
+
   <form #userForm="ngForm">
     <div class="form-group">
       <label for="name">Name</label>
       <input
         id="name"
         class="form-control"
+        [class.is-invalid]="name.invalid && name.touched" 
         type="text"
+        #name="ngModel"
         name="name"
         required
         [(ngModel)]="userModal.name"
-        #name
       />
     </div>
-    {{ name.className }}
+    <!-- {{ name.className }} -->
     <div class="form-group">
       <label for="email">Email</label>
       <input
@@ -31,6 +33,9 @@
         class="form-control"
         type="tel"
         name="phone"
+        #phone= "ngModel"
+        pattern="^\d{10}$"
+        [class.is-invalid] = "phone.invalid && phone.touched"
         [(ngModel)]="userModal.phone"
       />
     </div>
